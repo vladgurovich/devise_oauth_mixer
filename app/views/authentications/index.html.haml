@@ -1,0 +1,30 @@
+%h2
+  Your Authentications
+%table.table
+  %thead
+    %th
+      Provider
+    %th
+      Username
+    %th
+      Email
+    %th
+      Created At
+    %th
+      Updated At
+    %th
+      Actions
+  - @authentications.each do |auth|
+    %tr
+      %td
+        = auth.provider
+      %td
+        = auth.username
+      %td
+        = auth.email
+      %td
+        = auth.created_at
+      %td
+        = auth.updated_at
+      %td
+        = link_to("Unlink", delete_authentications_path(auth), :method => :delete, :confirm => "Are you sure?")

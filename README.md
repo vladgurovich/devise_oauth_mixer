@@ -1,0 +1,1 @@
+a Proof Of Concept application that shows how to combine multiple OAuth identities using Devise & OmniAuth
