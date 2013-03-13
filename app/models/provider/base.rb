@@ -17,7 +17,7 @@ module Provider
     end
 
     def uid
-      oauth_hash['extra']['raw_info']['id']
+      oauth_hash['extra']['raw_info']['id'].to_s
     end
     def provider_name
       oauth_hash['provider']
