@@ -6,7 +6,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
   [:facebook, :twitter, :google_oauth2].each do |provider|
-    config.omniauth provider, ENV["#{provider.camelize}_KEY"], ENV["#{provider.camelize}_SECRET"]
+    config.omniauth provider, ENV["#{provider.to_s.upcase}_KEY"], ENV["#{provider.to_s.upcase}_SECRET"]
   end
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
